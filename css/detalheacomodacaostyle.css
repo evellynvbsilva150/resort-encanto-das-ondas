@@ -1,0 +1,374 @@
+
+/* CONFIGURAÇÕES GERAIS */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 20px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #174e4c;
+    background-color: azure;
+}
+
+/*========================================================*/
+/*CABEÇALHO*/
+header {
+    background-color: azure;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    grid-template-columns: 1fr auto 1fr;
+
+}
+
+body {
+    background-color: white;
+    margin: 0;
+    text-decoration: none;
+}
+
+/*LOGO*/
+.logo {
+    text-align: center;
+    margin: 0;
+}
+
+.nome-resort {
+    font-family:"Brush Script MT", "Segoe Script", "cursive";
+    font-size: 35px;
+    font-weight: 400;
+    color:rgb(4, 4, 95);
+    line-height: 1;
+}
+
+.subtitulo {
+    font-family:"Arial", "sans-serif";
+    font-size: 10px;
+    letter-spacing: 8px;
+    color:rgb(30, 161, 161);
+    margin-top: 10px;
+}
+
+/*MENU*/
+ul  {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;          
+}
+
+ul a {
+    color: rgb(0, 0, 139);
+    text-decoration: none;
+    font-size: 19px;
+    font-weight: bold;
+    font-family: "Times New Roman", "serif";
+}
+
+ul a:hover{
+    color: rgb(30, 161, 161)              
+}
+
+ul a.active {
+    border-bottom: 2px solid rgb(30, 161, 161);
+    padding-bottom: 4px;
+}
+
+.botao-reservar {
+    background-color:rgb(106, 189, 189);
+    color: darkblue;
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    justify-self: end;
+
+}
+
+.botao-reservar:hover {
+    background-color: #226e64;
+    color: white;
+    text-decoration: none;
+}
+
+main{
+    background-color: white;
+}
+
+/*=============================================*/
+/* APRESENTAÇÃO */
+
+.introducao {
+    padding: 45px 20px 35px;
+    text-align: center;
+    background-color: white;
+}
+
+.introducao span {
+    color: #11878b;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.introducao h1 {
+    margin: 12px 0;
+    color: #073f49;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 38px;
+}
+
+.introducao p {
+    color: #315e63;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* DETALHES DE CADA ACOMODAÇÃO */
+
+.detalhe-acomodacao {
+    display: grid;
+    grid-template-columns: 1.05fr 1fr;
+    gap: 35px;
+    align-items: center;
+    max-width: 1200px;
+    margin: 35px auto;
+    padding: 25px;
+    background-color: azure;
+    border: 1px solid #e5e1d7;
+    border-radius: 12px;
+    scroll-margin-top: 20px;
+    transition: box-shadow 0.3s ease;
+}
+
+.detalhe-acomodacao:hover {
+    box-shadow: 0 8px 22px rgba(7, 63, 73, 0.10);
+}
+
+/* IMAGEM */
+
+.imagem-acomodacao {
+    position: relative;
+    overflow: hidden;
+    border-radius: 9px;
+}
+
+.imagem-acomodacao img {
+    display: block;
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.detalhe-acomodacao:hover .imagem-acomodacao img {
+    transform: scale(1.05);
+}
+
+.etiqueta {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    padding: 9px 13px;
+    border-radius: 20px;
+    background-color: azure;
+    color: #075965;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* INFORMAÇÕES */
+
+.informacoes-acomodacao {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 17px;
+}
+
+.categoria {
+    color: #11878b;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.informacoes-acomodacao h2 {
+    color: #073f49;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 30px;
+}
+
+.descricao {
+    color: #315e63;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+/* COMODIDADES */
+
+.caracteristicas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px 12px;
+    width: 100%;
+    padding: 18px 0;
+    border-top: 1px solid #d9e6e2;
+    border-bottom: 1px solid #d9e6e2;
+}
+
+.caracteristicas span {
+    color: #174e4c;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+/* PREÇO E RESERVA */
+
+.preco-reserva {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 18px;
+    width: 100%;
+}
+
+.preco {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.preco span {
+    color: #315e63;
+    font-size: 12px;
+}
+
+.preco strong {
+    color: #073f49;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 28px;
+}
+
+.preco small {
+    color: #315e63;
+    font-size: 12px;
+}
+
+.botao-reservar-acomodacoes {
+    font-family: Arial, Helvetica, sans-serif;
+    display: inline-block;
+    padding: 13px 20px;
+    border-radius: 25px;
+    background-color: #087765;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.botao-reservar-acomodacoes:hover {
+    background-color: #174e4c;
+    transform: scale(1.04);
+}
+
+/* AVISO DE PREÇOS */
+
+.aviso-precos {
+    padding: 10px 20px 35px;
+    color: #56716e;
+    font-size: 12px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+/* RODAPÉ */
+
+.rodape {
+    padding: 30px 20px;
+    background-color: #11878b;
+    color: #ffffff;
+    text-align: center;
+}
+
+.nome-rodape {
+    margin-bottom: 8px;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/*======================================================*/
+/*TELAS MENORES*/
+@media (max-width: 900px) {
+    .detalhe-acomodacao { margin: 25px 20px; gap: 25px; }
+    .imagem-acomodacao img { height: 300px; }
+    .informacoes-acomodacao h2 { font-size: 26px; }
+}
+
+@media (max-width: 600px) {
+    .introducao h1 { font-size: 30px; }
+    .detalhe-acomodacao {
+        grid-template-columns: 1fr;
+        gap: 22px;
+        margin: 20px 12px;
+        padding: 15px;
+    }
+    .imagem-acomodacao img { height: 240px; }
+    .preco-reserva { flex-direction: column; align-items: stretch; }
+    .botao-reservar-acomodacoes { width: 100%; }
+}
+
+/*CABEÇALHO E RODAPE*/
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 20px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px 20px;
+    }
+
+    ul a {
+        font-size: 17px;
+    }
+
+    .rodape {
+        padding: 30px 20px 0;
+    }
+
+    .conteudo-rodape {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .logo-rodape,
+    .redes-sociais,
+    .atendimento {
+        width: 100%;
+    }
+
+    .redes-sociais {
+        align-items: center;
+    }
+}

@@ -1,0 +1,665 @@
+
+/*CABEÇALHO*/
+header {
+    background-color: azure;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    grid-template-columns: 1fr auto 1fr;
+}
+
+body {
+    background-color: white;
+    margin: 0;
+    text-decoration: none;
+}
+
+/*LOGO*/
+.logo {
+    text-align: center;
+    margin: 0;
+}
+
+.nome-resort {
+    font-family:"Brush Script MT", "Segoe Script", "cursive";
+    font-size: 35px;
+    font-weight: 400;
+    color:rgb(4, 4, 95);
+    line-height: 1;
+}
+
+.subtitulo {
+    font-family:Arial, "sans-serif";
+    font-size: 10px;
+    letter-spacing: 8px;
+    color:rgb(30, 161, 161);
+    margin-top: 10px;
+}
+
+/*MENU*/
+ul  {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;          
+}
+
+ul a {
+    color: rgb(0, 0, 139);
+    text-decoration: none;
+    font-size: 19px;
+    font-weight: bold;
+    font-family: "Times New Roman", "serif";
+    transition: color 0.3s;
+}
+
+ul a:hover{
+    color: rgb(30, 161, 161);              
+}
+
+ul a.active {
+   border-bottom: 2px solid rgb(30, 161, 161);
+   padding-bottom: 4px;
+}
+.botao-reservar {
+    background-color:rgb(106, 189, 189);
+    color: darkblue;
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 20px;
+    justify-self: end;
+}
+
+.botao-reservar:hover {
+    background-color: #226e64;
+    color: white;
+    text-decoration: none;
+}
+
+main{
+    background-color: white;
+}
+
+/*=================================================================*/
+/*BANNER*/
+.banner-inicio {
+    position: relative;
+    background-image: url("../imagens/img.banner.png");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    width: 100%; 
+    height: 550px; 
+    overflow: hidden; 
+}
+
+.texto-banner {
+    color: white;
+    position: relative;
+    z-index: 2;
+    margin-left: 40px;  
+}
+
+.texto-banner h1 {
+    font-size: 70px;
+    font-family:'Times New Roman', "Times", "serif"; 
+    font-weight: bold; 
+    padding: 20px; 
+    margin: 0;
+}
+
+.texto-banner p {
+    color: white; 
+    font-size: 22px; 
+    font-weight: bold; 
+    font-family: "Arial", "Helvetica", "sans-serif";
+    padding: 15px; 
+    margin: 10px; 
+} 
+
+.botao-banner {
+    display: inline-block;
+    color: darkblue; 
+    background-color: #88d4cc; 
+    text-decoration: none; 
+    border-radius: 20px; 
+    padding: 12px 20px; 
+    font-size: 20px; 
+    align-items: center; 
+    font-family:'Times New Roman', Times, serif; 
+    font-weight: bold; 
+    margin: 25px; 
+}
+
+.botao-banner:hover{ 
+    background-color: #226e64; 
+    color:whitesmoke; 
+} 
+
+.banner-inicio::before {
+    background-color: rgba(0, 0, 0, 0.20);
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+
+/*========================================================*/
+/*DESTAQUES*/
+
+.destaques {
+    background-color: azure;
+    padding: 20px;  
+}
+
+.titulo-destaques{
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;  
+}
+
+.titulo-destaques h2 {
+    color: rgb(0, 24, 22);
+    font-size: 30px;
+    margin-bottom: 25px;
+}
+
+.botao-destaques {
+    color: black;
+    margin-bottom: 20px;
+    text-decoration: none;
+}
+
+.botao-destaques:hover {
+    color: #237267; 
+}
+
+/*IMAGENS E DESCRIÇÃO DESTAQUES*/
+
+.todos-cards {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card {
+    width: 32%;
+}
+
+.card img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    display: block;
+}
+
+.card h3 {
+    color:rgb(4, 4, 95);
+    margin-top: 10px;
+    text-align: center;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 22px;     
+}
+
+
+/* MOVIMENTO DOS CARDS DE DESTAQUES */
+
+.card {
+    width: 32%;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.card img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+/* Movimento ao passar o mouse */
+
+.card:hover img {
+    transform: scale(1.05);
+}
+
+/* Efeito no título */
+
+.card h3 {
+    color: rgb(4, 4, 95);
+    margin-top: 10px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 22px;
+    transition: color 0.3s ease;
+}
+
+.card:hover h3 {
+    color: #237267;
+}
+
+/*===================================================================*/
+/*AVALIAÇÕES*/
+
+.avaliacoes {
+    background-color: rgb(182, 238, 238); 
+    padding: 20px;   
+    padding-bottom: 60px;
+    height: 230px;
+}
+
+.titulo-avaliacoes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2px;
+    padding: 2px;
+    font-size: 20px;
+}
+
+.botao-avaliacoes {
+    color: rgb(0, 24, 22);
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.botao-avaliacoes:hover {
+    color: #237267;
+}
+
+.cards-avaliacoes {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.avaliacao {
+    width: 30%;
+    padding: 15px;
+    background-color: rgb(240, 240, 237);
+    border-radius: 5px;
+    transition: transform 0.4s ease;
+}
+
+.avaliacao:hover {
+    transform: scale(1.05);
+}
+
+.usuario {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.icone-usuario {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 38px;
+    height: 38px;
+    flex-shrink: 0;
+
+    background-color: #087765;
+    color: white;
+    border-radius: 50%;
+
+    font-size: 15px;
+}
+
+.avaliacao p {
+    color: darkblue;
+    font-size: 16px;
+    line-height: 1;
+}
+
+.estrelas {
+    color: rgb(189, 189, 13);
+    font-size: 22px;
+    margin-top: 15px;   
+}
+
+
+/* BOTÃO ADICIONAR */
+
+.botao-avaliacoes {
+    color: rgb(0, 24, 22);
+    background: transparent;
+    border: none;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.botao-avaliacoes:hover {
+    color: #237267;
+}
+
+/* FORMULÁRIO DE AVALIAÇÃO */
+
+.formulario-comentario {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 25px;
+    background-color: rgb(240, 240, 237);
+    border-radius: 10px;
+}
+
+.formulario-comentario[hidden] {
+    display: none;
+}
+
+.formulario-comentario h3 {
+    font-family: "Times New Roman", serif;
+    font-size: 24px;
+    margin-bottom: 18px;
+    color: #073f49;
+}
+
+.formulario-comentario label {
+    display: block;
+    margin: 12px 0 6px;
+    font-weight: bold;
+    color: #073f49;
+}
+
+.formulario-comentario input,
+.formulario-comentario textarea,
+.formulario-comentario select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd8d0;
+    border-radius: 6px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    background-color: white;
+}
+
+.formulario-comentario textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.acoes-formulario {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 18px;
+}
+
+.enviar-avaliacao,
+#cancelar-avaliacao {
+    padding: 12px 18px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.enviar-avaliacao {
+    background-color: #084c58;
+    color: white;
+}
+
+.enviar-avaliacao:hover {
+    background-color: #11878b;
+}
+
+#cancelar-avaliacao {
+    background-color: #d8e7e5;
+    color: #073f49;
+}
+
+/*=================================================*/
+/*RODAPÉ*/
+
+.rodape {
+    color: white;
+    background-color: rgb(17, 135, 139);
+    padding: 40px 60px 0;  
+}
+
+/*CONTEUDO RODAPÉ*/
+
+.conteudo-rodape {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 30px;
+}
+
+/*LOGO-RODAPE*/
+
+.logo-rodape {
+    width: 30%;
+    margin: 0;
+    text-align: center;
+    padding: 20px 12px;
+}
+
+.nome-resort-rodape {
+    font-family:"Brush Script MT", "Segoe Script", "cursive";
+    font-size: 35px;
+    font-weight: 400;
+    color:rgb(4, 4, 95);
+    line-height: 1;
+}
+
+.subtitulo-rodape {
+    font-family:"Arial", "sans-serif";
+    font-size: 10px;
+    letter-spacing: 8px;
+    color:rgb(80, 206, 206);
+    margin-top: 10px;
+}
+
+/*REDES SOCIAIS*/
+
+.redes-sociais {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    color:rgb(4, 4, 95);
+
+}
+
+.redes-sociais h3 {
+    margin-bottom: 15px;
+}
+
+.perfil-rede:hover {
+    color:#b0dbd6;
+}
+
+/*ATENDIMENTO*/
+
+.atendimento {
+    width: 35%;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 30px;
+    color:rgb(4, 4, 95);
+
+}
+
+.atendimento h3 {
+    margin-bottom: 15px;
+}
+
+.atendimento p {
+    margin: 0 0 10px 0;
+    font-size: 14px;
+}
+
+.contato-atendimento:hover {
+    color:#b0dbd6;
+}
+
+/*RODAPE FINAL*/
+
+.rodape-final {
+    border-top: 1px;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 13px;
+    color:rgb(4, 4, 95);
+
+}
+
+/*============================================================*/
+/*RESPONSIVIDADE*/
+@media (max-width: 900px) {
+    .cabecalho-sobre {
+        flex-wrap: wrap;
+    }
+
+    .menu-sobre {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .historia-sobre {
+        flex-wrap: wrap;
+    }
+
+    .texto-historia,
+    .trajetoria,
+    .missao-visao {
+        flex: 1 1 40%;
+    }
+
+    .historia-sobre > img {
+        width: 40%;
+    }
+
+    .experiencias-sobre {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .cards-experiencias {
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .cabecalho-sobre {
+        flex-direction: column;
+    }
+
+    .menu-sobre {
+        justify-content: center;
+    }
+
+    .apresentacao-sobre {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .apresentacao-sobre > img {
+        width: 100%;
+        height: 220px;
+    }
+
+    .historia-sobre {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .historia-sobre > img {
+        width: 100%;
+        height: 220px;
+    }
+
+    .lista-diferenciais {
+        flex-wrap: wrap;
+    }
+
+    .diferencial {
+        flex: 1 1 40%;
+    }
+
+    .cards-experiencias {
+        flex-direction: column;
+    }
+
+    .card-experiencia img {
+        height: 200px;
+    }
+
+    .botao-reservar {
+        text-align: center;
+    }
+}
+
+
+
+/*CABEÇALHO E RODAPE*/
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 20px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px 20px;
+    }
+
+    ul a {
+        font-size: 17px;
+    }
+
+    .rodape {
+        padding: 30px 20px 0;
+    }
+
+    .conteudo-rodape {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .logo-rodape,
+    .redes-sociais,
+    .atendimento {
+        width: 100%;
+    }
+
+    .redes-sociais {
+        align-items: center;
+    }
+}
+
+/*REGRAS ESPECIFICAS PARA A PAGINA INICIAL*/
+@media (max-width: 768px) {
+    .banner-inicio { height: auto; min-height: 450px; padding: 40px 0; }
+    .texto-banner { margin-left: 0; padding: 0 20px; }
+    .texto-banner h1 { font-size: 38px; padding: 10px 0; }
+    .texto-banner p { font-size: 18px; padding: 0; margin: 10px 0; }
+    .botao-banner { margin: 15px 0; }
+
+    .todos-cards { flex-direction: column; gap: 25px; }
+    .card { width: 100%; }
+    .card img { height: 250px; }
+
+    .avaliacoes { height: auto; padding-bottom: 30px; }
+    .cards-avaliacoes { flex-direction: column; gap: 15px; }
+    .avaliacao { width: auto; }
+}

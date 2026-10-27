@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Encanto das Ondas - Reserva</title>
+        
+     <link rel="stylesheet" href="css/reservarstyle.css">  
+    </head>
+
+    <body>
+        <!--CABEÇALHO-->
+        <header>
+            <!--LOGO-->
+            <div class="logo">
+                <div class="nome-resort">Encanto das Ondas</div>
+                <div class="subtitulo"><strong>RESORT</strong></div>
+            </div>
+
+            <nav>
+            <ul>
+                <!--MENU-->
+                <li><a href="index.html">Início</a></li>
+                <li><a href="acomodacoes.html">Acomodações</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li><a href="sobrenos.html">Sobre Nós</a></li>
+                
+            </ul>
+            </nav>
+
+              <!--BOTAO RESERVAR-->  
+            <a href="reservar.html" class="botao-reservar" class="active">
+                <b>RESERVAR AGORA</b>
+            </a>
+                
+        </header>
+        
+         <!-- PAGINA RESERVAR -->
+        <main class="pagina-reserva">
+
+            <section class="reserva">
+
+                <div class="titulo-reserva">
+                     <span class="pequeno-titulo">SUA EXPERIÊNCIA COMEÇA AQUI</span>
+
+                    <h1>Faça sua reserva</h1>
+
+                    <p>
+                    Preencha os dados abaixo e prepare-se
+                    para viver momentos inesquecíveis.
+                    </p>
+                </div>
+
+                <form class="formulario-reserva">
+
+                    <div class="campo">
+                         <label for="nome">Nome completo</label>
+                         <input
+                             type="text"
+                             id="nome"
+                             name="nome"
+                             placeholder="Digite seu nome completo"
+                             required
+                         >
+                    </div>
+
+                    <div class="campo">
+                         <label for="email">E-mail</label>
+                         <input
+                             type="email"
+                             id="email"
+                             name="email"
+                             placeholder="Digite seu e-mail"
+                             required
+                         >
+                    </div>
+
+                    <div class="campo">
+                         <label for="checkin">Check-in</label>
+                         <input
+                             type="date"
+                             id="checkin"
+                             name="checkin"
+                             required
+                         >
+                    </div>
+
+                    <div class="campo">
+                         <label for="checkout">Check-out</label>
+                         <input
+                             type="date"
+                             id="checkout"
+                             name="checkout"
+                             required
+                         >
+                    </div>
+
+                    <div class="campo">
+                         <label for="hospedes">Número de hóspedes</label>
+                         <select id="hospedes" name="hospedes" required>
+                             <option value="">Selecione</option>
+                             <option value="1">1 hóspede</option>
+                             <option value="2">2 hóspedes</option>
+                             <option value="3">3 hóspedes</option>
+                             <option value="4">4 hóspedes</option>
+                         </select>
+                    </div>
+
+                    <div class="campo">
+                         <label for="acomodacao">Tipo de acomodação</label>
+                         <select id="acomodacao" name="acomodacao" required>
+                             <option value="">Escolha sua acomodação</option>
+                             <option value="suite-mar">Suíte com vista para o mar</option>
+                             <option value="suite-familia">Suíte família</option>
+                             <option value="suite-casal">Suíte familía premium</option>
+                         </select>
+                    </div>
+
+                    <div class="campo campo-completo">
+                         <label for="observacoes">Observações (opcional)</label>
+                         <textarea
+                             id="observacoes"
+                             name="observacoes"
+                             placeholder="Conte-nos se possui algum pedido especial..."
+                             rows="3"
+                         ></textarea>
+                    </div>
+
+                    <button type="submit" class="botao-reserva">
+                        Solicitar reserva <span>→</span>
+                    </button>
+
+                </form>
+
+            </section>
+
+        </main>
+
+            <!--RODAPE-->
+         <footer class="rodape">
+
+                <div class="conteudo-rodape">
+
+                 <!--LOGO-->
+                 <div class="logo-rodape">
+
+                  <div class="nome-resort-rodape">Encanto das Ondas</div>
+                  <div class="subtitulo-rodape"><strong>RESORT</strong></div>
+
+                 </div>
+
+                 <!--REDES SOCIAIS-->
+                 <div class="redes-sociais">
+
+                    <h3>Acesse nossas redes sociais</h3>
+
+                 <div class="rede">
+                    <p class="nome-rede">INSTAGRAM</p>
+                    <p class="perfil-rede">@encanto_das_ondas</p>
+                 </div>
+
+                 <div class="rede">
+                    <p class="nome-rede">FACEBOOK</p>
+                    <p class="perfil-rede">encanto_das_ondas</p>
+                 </div>
+
+                 <div class="rede">
+                    <p class="nome-rede">EMAIL</p>
+                    <p class="perfil-rede">encantodasondas@gmail.com</p>
+                 </div>
+
+               </div>
+
+               <!--ATENDIMENTO-->
+               <div class="atendimento">
+
+                <h3>ATENDIMENTO</h3>
+
+                <p>📞(11) 11111-1111</p>
+                <p class="contato-atendimento">✉️contato@encantodasondas.com</p>
+                <p>🕒Seg - Sex: 8h - 18h</p>
+                <p>🕒Sáb - Dom: 8h - 16h</p>
+                <p>📍Rua: Estrela do Mar, 111</p>
+
+               </div>
+
+             </div>
+
+             <!--RODAPE FINAL-->
+             <div class="rodape-final">
+                <p>© 2026 Encanto das Ondas Resort. </p>
+             </div>
+
+            </footer>
+
+    </body>
+
+</html>  
